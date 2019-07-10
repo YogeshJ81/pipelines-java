@@ -29,3 +29,6 @@ Privacy information can be found at https://privacy.microsoft.com/en-us/
 
 Microsoft and any contributors reserve all others rights, whether under their respective copyrights, patents,
 or trademarks, whether by implication, estoppel or otherwise.
+
+Status-----
+[![Build Status](https://dev.azure.com/ysjaiswal81/ysjaiswal81/_apis/build/status/YogeshJ81.pipelines-java?branchName=master)](https://dev.azure.com/ysjaiswal81/ysjaiswal81/_build/latest?definitionId=1&branchName=master)
