@@ -7,12 +7,11 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-16.04' # other options: 'macOS-10.13', 'vs2017-win2016'
+  vmImage: 'ubuntu-latest'
 
 steps:
 - task: Maven@3
   inputs:
-    workingDirectory: ''
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
@@ -20,22 +19,4 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: false
     testResultsFiles: '**/TEST-*.xml'
-    goals: 'package'
-
-
-- task: Ant@1
-  inputs:    
-    buildFile: 'build.xml'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.11'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: false
-    testResultsFiles: '**/TEST-*.xml'
-- script: |
-    echo Starting the build
-    mvn package
-  displayName: 'Build with Maven'
-- task: ShellScript@2
-  inputs:
-    scriptPath: 'build.sh'
-
+goals: 'package'
